@@ -6,7 +6,7 @@
         nuxt-org
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        Nuxt.js project11
       </h2>
        <Button type="primary">主要按钮</Button>
       <div class="links">

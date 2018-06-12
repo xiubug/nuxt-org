@@ -5,7 +5,8 @@
   "author": "sosout <sosout@139.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "node scripts/server.js",
+    "hook-dev": "nuxt",
     "start": "PORT=3003 nuxt start",
     "local-build": "nuxt build --api=dev",
     "dev-build": "nuxt build && npm run start --api=dev",
