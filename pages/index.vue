@@ -3,7 +3,7 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        iawp-org
+        nuxt-org
       </h1>
       <h2 class="subtitle">
         Nuxt.js project
@@ -31,7 +31,20 @@ export default {
   components: {
     AppLogo,
     Button
-  }
+  },
+  data () {
+      return {
+        title: 'Index - Nuxt.org'
+      }
+    },
+    head () {
+      return {
+        title: this.title,
+        meta: [
+          { hid: 'description', name: 'description', content: 'Index of Nuxt.org' }
+        ]
+      }
+    }
 };
 </script>
 
