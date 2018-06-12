@@ -52,6 +52,6 @@ $ pm2 start npm --name "my-nuxt" -- run build
 
 ### 开发环境是否允许自动打开浏览器
 
-不允许自动打开浏览器，作者认为自动打开浏览器具有侵略性！参考：[Auto open browser when run dev](https://github.com/nuxt/nuxt.js/issues/1433)，该项目是通过express 和 opn 自动打开浏览器的！
+不允许自动打开浏览器，作者认为自动打开浏览器具有侵略性！参考：[Auto open browser when run dev](https://github.com/nuxt/nuxt.js/issues/1433).
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).

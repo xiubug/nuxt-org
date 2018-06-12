@@ -5,10 +5,10 @@
   "author": "sosout <sosout@139.com>",
   "private": true,
   "scripts": {
-    "dev": "node scripts/server.js",
+    "dev": "nuxt",
     "start": "PORT=3003 nuxt start",
-    "local-build": "nuxt build",
-    "dev-build": "nuxt build && npm run start --api=pre",
+    "local-build": "nuxt build --api=dev",
+    "dev-build": "nuxt build && npm run start --api=dev",
     "pre-build": "nuxt build && npm run start --api=pre",
     "prod-build": "nuxt build && npm run start --api=prod",
     "analyze": "nuxt build --analyze",
@@ -16,9 +16,15 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": "8888"
+    }
+  },
   "dependencies": {
     "element-ui": "^2.4.1",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.4.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

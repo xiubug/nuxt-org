@@ -1,10 +1,9 @@
+const opn = require('opn');
+
 module.exports = {
-  render: {
-    bundleRenderer: {
-      cache: require('lru-cache')({
-        max: 1000,
-        maxAge: 1000 * 60 * 15
-      })
+  hooks: {
+    listen(server, { host, port }) {
+      opn(`http://${host}:${port}`)
     }
   },
   dev: (process.env.NODE_ENV !== 'production'),
@@ -59,5 +58,11 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  /*
+  ** Global CSS
+  */
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ]
 }
