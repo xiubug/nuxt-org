@@ -31,7 +31,8 @@ module.exports = {
   */
   build: {
     vender:[
-      'element-ui'
+      'element-ui',
+      'big.js'
     ],
     babel: {
       "plugins": [
