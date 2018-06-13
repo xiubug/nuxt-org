@@ -43,8 +43,7 @@ module.exports = {
             "styleLibraryName": "theme-chalk"
           }
         ]
-      ],
-      comments: true
+      ]
     },
     /*
     ** Run ESLint on save
@@ -60,12 +59,12 @@ module.exports = {
       }
     }
   },
-  /*
-  ** Global CSS
-  */
   css: [
     'element-ui/lib/theme-chalk/index.css'
   ],
+  plugins: [{
+    src: '~/plugins/element-ui'
+  }],
   modules: [
     "@nuxtjs/pwa"
   ]

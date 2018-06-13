@@ -8,7 +8,7 @@
       <h2 class="subtitle">
         Nuxt.js project11
       </h2>
-       <Button type="primary">主要按钮</Button>
+       <el-button type="primary">主要按钮</el-button>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -25,12 +25,10 @@
 
 <script>
 import AppLogo from "~/components/AppLogo.vue";
-import { Button } from "element-ui";
 
 export default {
   components: {
-    AppLogo,
-    Button
+    AppLogo
   },
   data () {
       return {
