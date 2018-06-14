@@ -22,11 +22,17 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'nuxt-org',
+    title: '一套基于 Vue.js 的高质量 UI 组件库 - Weich',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { name: 'MobileOptimized', content: '320' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { "http-equiv": 'cleartype', content: 'on'  },
+      { "http-equiv": 'X-UA-Compatible', content: 'ie=edge' },
+      { name: 'referrer', content: 'always'},
+      { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { hid: 'keywords', name: 'keywords', content:  'Zant,Zanm,UI组件' },
+      { hid: 'description', name: 'description', content: 'Zant,Zanm,一套基于 Vue.js 的高质量 UI 组件库' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -70,6 +76,7 @@ module.exports = {
     }
   },
   css: [
+    '~assets/style/main.css',
     'element-ui/lib/theme-chalk/index.css'
   ],
   plugins: [{

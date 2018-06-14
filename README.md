@@ -2,7 +2,7 @@
 
 > 基于Nuxt.js最佳实现
 
-- 预览：http://nuxt.sosout.com/
+- 预览：http://nuxt.zantb.com/
 
 ## 快速上手
 
