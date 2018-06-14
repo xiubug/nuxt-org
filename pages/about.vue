@@ -1,30 +1,30 @@
 <template>
   <div>
-    This is About Page!
-    <Button type="primary">主要按钮</Button>
+    <p>Hi from {{ name }}</p>
+    <nuxt-link to="/">Home page</nuxt-link>
   </div>
 </template>
 
 <script>
-import { Button } from "element-ui";
-
 export default {
-  components: {
-    Button
+  asyncData() {
+    return {
+      name: process.static ? 'static' : (process.server ? 'server' : 'client')
+    }
   },
   data () {
-      return {
-        title: 'About - Nuxt.org'
-      }
-    },
-    head () {
-      return {
-        title: this.title,
-        meta: [
-          { hid: 'description', name: 'description', content: 'About of Nuxt.org' }
-        ]
-      }
+    return {
+      title: 'About - Nuxt.org'
     }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'About of Nuxt.org' }
+      ]
+    }
+  }
 };
 </script>
 

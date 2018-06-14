@@ -7,6 +7,17 @@ module.exports = {
     }
   },
   dev: (process.env.NODE_ENV !== 'production'),
+  render: {
+    bundleRenderer: {
+      cache: require('lru-cache')({
+        max: 1000,
+        maxAge: 1000 * 60 * 15
+      }),
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
+    }
+  },
   /*
   ** Headers of the page
   */
@@ -24,8 +35,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
-  cache: true,
+  loading: '~/components/loading.vue',
   /*
   ** Build configuration
   */

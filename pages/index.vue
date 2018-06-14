@@ -1,79 +1,40 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        nuxt-org
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project11
-      </h2>
-       <el-button type="primary">主要按钮</el-button>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>
+  <div>
+    <h1>Welcome!Cached components</h1>
+    <p>Look at the source code and see how the timestamp is not reloaded before 10s after refreshing the page.</p>
+    <p>Timestamp: {{ date }}</p>
+    <nuxt-link to="/about">About page</nuxt-link>
+  </div>
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue";
+// import AppLogo from "~/components/AppLogo.vue";
 
 export default {
-  components: {
-    AppLogo
+  name: 'home',
+  // components: {
+  //   AppLogo
+  // },
+  serverCacheKey() {
+    // Will change every 10 secondes
+    return Math.floor(Date.now() / 10000);
   },
   data () {
-      return {
-        title: 'Index - Nuxt.org'
-      }
-    },
-    head () {
-      return {
-        title: this.title,
-        meta: [
-          { hid: 'description', name: 'description', content: 'Index of Nuxt.org' }
-        ]
-      }
+    return {
+      title: 'Index - Nuxt.org',
+      date: Date.now()
     }
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Index of Nuxt.org' }
+      ]
+    }
+  }
 };
 </script>
 
 <style lang="less">
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
